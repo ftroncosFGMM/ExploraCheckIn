@@ -43,6 +43,17 @@ font-weight:bold;
 margin-top:10px;
 }
 
+.boton{
+margin-top:30px;
+font-size:22px;
+padding:15px 30px;
+border:none;
+border-radius:12px;
+background:white;
+color:#16a34a;
+cursor:pointer;
+}
+
 @keyframes pop{
 0%{transform:scale(0)}
 70%{transform:scale(1.2)}
@@ -62,6 +73,8 @@ margin-top:10px;
 
 <div class="nombre" id="nombre">Bienvenido</div>
 
+<button class="boton" onclick="playSound()">🔊 Confirmar</button>
+
 </div>
 
 <audio id="sound">
@@ -77,9 +90,9 @@ if(nombre){
 document.getElementById("nombre").textContent = nombre;
 }
 
-window.onload = () => {
+function playSound(){
 const audio = document.getElementById("sound");
-audio.play().catch(()=>{});
+audio.play();
 }
 
 </script>
