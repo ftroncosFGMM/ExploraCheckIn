@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Check-in</title>
+</head>
+
+<body style="text-align:center;font-family:sans-serif;padding-top:100px;">
+
+<h1 id="mensaje"></h1>
+
+<audio id="beep">
+  <source src="https://www.soundjay.com/buttons/sounds/button-3.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const nombre = params.get("nombre");
+
+document.getElementById("mensaje").innerText =
+"🟢 CHECK-IN EXITOSO - Bienvenido " + nombre;
+
+document.getElementById("beep").play();
+</script>
+
+</body>
+</html>
